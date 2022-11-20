@@ -1,0 +1,20 @@
+{% extends 'animalerie/base.html' %}
+{% load static %}
+{% block content %}
+<div class="change">
+    <h1>
+        <a  class="title" href="/">{{ animal.id_animal }}</a>
+    </h1>
+    <form class="anim">
+        <img src= {{animal.photo}} alt="" width="300" height="225">
+    </form>
+    <form method="POST" class="postagem post-form">{% csrf_token %}
+        <b> Changer : </b> {{ form.as_ul }}
+        <button type="submit" class="btn btn-outline-dark">OK</button>
+        <input type="button" value="Back" onclick="history.back()" class="botao">
+    </form>
+</div>
+
+
+
+{% endblock %}
