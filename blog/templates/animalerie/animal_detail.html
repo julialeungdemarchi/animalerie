@@ -8,13 +8,17 @@
     <form class="anim">
         <img src= {{animal.photo}} alt="" width="300" height="225">
     </form>
-    <form method="POST" class="postagem post-form">{% csrf_token %}
+    <form method="POST" class="postagem post-form" id="detail">{% csrf_token %}
         <b> Changer : </b> {{ form.as_ul }}
         <button type="submit" class="btn btn-outline-dark">OK</button>
-        <input type="button" value="Back" onclick="history.back()" class="botao">
+        <input type="button" value="Back" onclick="window.location.href='/animal';" class="botao">
     </form>
+    {% if message != ''%}
+        <div class="alert alert-danger" role="alert">
+            {{message}}
+        </div>
+    {% endif %}
 </div>
-
 
 
 {% endblock %}

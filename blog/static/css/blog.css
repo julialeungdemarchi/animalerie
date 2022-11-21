@@ -35,6 +35,9 @@ form.postagem{
     border-color: black;
     border-radius: 10px;
     vertical-align: baseline;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 button.btn {
@@ -62,7 +65,7 @@ input.botao{
 div.change{
     background-color: #6f42c1;
     width: 40%;
-    height: 40%;
+    height: 80%;
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
@@ -98,4 +101,9 @@ button.botao2{
 
 .equipements{
     margin-top: 75px;
+}
+
+.first{
+    margin-top: 20px;
+    border-radius: 10px;
 }

@@ -1,14 +1,14 @@
 {% extends 'animalerie/base.html' %}
 
 {% block content %}
+    <div class="row row-cols-2">
     {% for animal in animals %}
-        <div class="col">
             <div class="animals">
                 <img src= {{animal.photo}} alt="" width="300" height="225">
-                <p><font size="5"><b><a href="animal/{{ animal.id_animal }}/">{{ animal.id_animal }}</a></b></font></p>
+                <p><font size="5"><b><a href="/animal/{{ animal.id_animal }}/">{{ animal.id_animal }}</a></b></font></p>
                 <p><b>État:</b> {{ animal.etat }}</p>
                 <p><b>Lieu:</b> {{ animal.lieu|linebreaksbr }}</p>
             </div>
-        </div>
     {% endfor %}
+    </div>
 {% endblock %}

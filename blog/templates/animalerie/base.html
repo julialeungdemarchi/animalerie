@@ -7,10 +7,10 @@
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
         <div class="page-header">
             <h1>Animalerie</h1>
-            <button class="botao1" onclick="window.location.href='animal';">
+            <button class="botao1" onclick="window.location.href='/animal';">
                 Animals
             </button>
-            <button class="botao2" onclick="window.location.href='equipement';">
+            <button class="botao2" onclick="window.location.href='/equipement';">
                 Equipements
             </button>
         </div>
@@ -18,11 +18,9 @@
     </head>
     <body>
         <div class="content text-center">
-            <div class="row row-cols-2">
                 {% block content %}
                 <a href="{% url 'animal_detail' id_animal=animal.id_animal %}">{{ animal.id_animal }}</a>
                 {% endblock %}
-            </div>
         </div>
     </body>
 </html>

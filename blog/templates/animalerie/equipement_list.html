@@ -1,6 +1,7 @@
 {% extends 'animalerie/base.html' %}
 
 {% block content %}
+    <div class="row row-cols-2">
     {% for equipement in equipements %}
         <div class="col">
             <div class="equipements">
@@ -10,4 +11,5 @@
             </div>
         </div>
     {% endfor %}
+    </div>
 {% endblock %}
